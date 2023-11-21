@@ -4,6 +4,10 @@ import React from 'react'
 */
 export default function PlayerCard() {
   return (
-    <div>PlayerCard</div>
+    <div>
+        <p>player name</p>
+        <img src="./" alt="player image" />
+        <button>Details</button>
+    </div>
   )
 }
