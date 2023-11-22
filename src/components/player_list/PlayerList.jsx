@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import PlayerCard from '../player_card/PlayerCard'
+import "./PlayerList.css"
 /*
 *A list of all player cards filtered by search bar
 */
@@ -13,7 +14,7 @@ export default function PlayerList(props) {
   useEffect(()=>{console.log(playerList)},[playerList])
 
   return (
-    <div>
+    <div className='player-list'>
         
         {playerList?(<>
         {playerList.map((player)=>{

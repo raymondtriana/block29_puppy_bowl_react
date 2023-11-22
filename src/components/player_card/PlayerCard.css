@@ -1,0 +1,30 @@
+.player-div{
+    margin: 5px;
+    background-image: linear-gradient(rgba(30, 255, 0, 0.562), rgba(202, 202, 106, 0.308));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.player-name{
+    font-size: 18pt;
+    background-color: aqua;
+    margin: 0;
+}
+.player-image{
+    width: 256px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.details-button{
+    background-image: linear-gradient(rgba(0, 0, 255, 0.562), rgb(153, 155, 153));
+    border: none;
+    color: rgb(255, 255, 255);
+    width: 256px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}

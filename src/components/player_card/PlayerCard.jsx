@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
+import "./PlayerCard.css"
 /*
  *Basic card style player showing basic information
  */
@@ -13,12 +14,12 @@ export default function PlayerCard(props) {
       setPlayer(props.data)
     },[props.data])
   return (
-    <div>
+    <div className="player-div">
       {player?(<>
-        <p>{player.name}</p>
-        <img src={player.imageUrl} alt="player image" />
+        <p className="player-name">{player.name}</p>
+        <img className = "player-image" src={player.imageUrl} alt="player image" />
         <Link to={`details/${player.id}`}>
-          <button type="button">Click Me!</button>
+          <button className="details-button" type="button">Click Me!</button>
         </Link>
       </>):(<></>)}
     </div>
