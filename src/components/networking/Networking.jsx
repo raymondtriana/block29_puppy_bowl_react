@@ -43,4 +43,20 @@ export const postPlayer = async function (data) {
   }
 };
 
-export const deletePlayer = function (id) {};
+export const deletePlayer = async function (playerId) {
+  console.log("DELETING:")
+  console.log(playerId)
+  try {
+    let response = await fetch(BASE_URL + "players/"+playerId,{
+        method:'DELETE',
+    });
+    const result = await response.json();
+    console.log(result);
+    location.reload();
+  } catch (err) {
+    console.error(
+      `Whoops, trouble removing player #${playerId} from the roster!`,
+      err
+    );
+  }
+};

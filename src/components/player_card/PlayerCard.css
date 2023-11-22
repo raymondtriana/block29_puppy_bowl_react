@@ -12,6 +12,16 @@
     background-color: cadetblue;
 }
 
+#player-delete-div{
+    width: 100%;
+}
+#player-delete-button{
+    width: 100%;
+    color: red;
+    font-weight: bolder;
+    font-size: 12pt;
+}
+
 .image-div{
     border-style: inset;
     margin-top: auto;
