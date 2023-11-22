@@ -25,6 +25,18 @@
 .detailed-player-image {
   width: 512px;
 }
+
+.detailed-stats-div{
+  width: 512px;
+  background-color: aliceblue;
+  font-weight: bold;
+  word-wrap: break-word;
+  font-size: 18pt;
+}
+.detailed-stats-div > p{
+  text-indent: 10px;  
+}
+
 .detailed-return-button {
   background-image: linear-gradient(rgba(0, 0, 255, 0.562), rgb(153, 155, 153));
   font-weight: bold;

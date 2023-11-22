@@ -25,9 +25,14 @@ export default function PlayerDetails(props) {
             <p className="detailed-player-name">{player.name}</p>
           </div>
           <img className="detailed-player-image" src={player.imageUrl} alt="" />
+          <div className="detailed-stats-div">
+            <p>{">"}{player.name}</p>
+            <p>{">"}{player.breed}</p>
+            <p>{">"}{player.status}</p>
+          </div>
           <Link className="link" to="/">
             <button className="detailed-return-button" type="button">
-              Click Me!
+              Return
             </button>
           </Link>
         </div>
