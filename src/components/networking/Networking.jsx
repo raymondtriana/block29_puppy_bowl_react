@@ -29,8 +29,6 @@ export const getPlayerByID = async function (id, setter) {
 export const updatePlayer = function (id, data) {};
 
 export const postPlayer = async function (data) {
-  console.log("POSTING PLAYER")
-  console.log(data)
   try {
     const response = await fetch(BASE_URL + "players/", {
       method: "POST",
@@ -40,7 +38,6 @@ export const postPlayer = async function (data) {
       body: JSON.stringify(data),
     });
     const result = await response.json();
-    console.log(result)
   } catch (error) {
     console.log(error)
   }

@@ -15,11 +15,18 @@ export default function PlayerList(props) {
 
   return (
     <div className='player-list'>
-        
-        {playerList?(<>
+        {playerList && props.search !== ""?(<>
         {playerList.map((player)=>{
+          if(player.name.includes(props.search))
+        
           return <PlayerCard key={player.id} data={player}/>
 
+        })}
+        </>):(<p>a</p>)}
+        
+        {playerList && props.search == ""?(<>
+        {playerList.map((player)=>{
+          return <PlayerCard key={player.id} data={player}/>
         })}
         </>):(<p>a</p>)}
         <PlayerCard/>

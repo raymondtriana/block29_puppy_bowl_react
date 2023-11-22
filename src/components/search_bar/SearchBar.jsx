@@ -7,11 +7,11 @@ const filterType = {
   Exact: 0, //will filter for names whose 0-n chars are types
   Contains: 1, //will filter for names that include input string
 };
-export default function SearchBar() {
+export default function SearchBar(props) {
   const [search,setSearch] = useState("")
 
   useEffect(()=>{
-    console.log("SEARCHING FOR: "+search)
+    props.setSearch(search)
   },[search])
 
   return (

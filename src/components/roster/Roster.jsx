@@ -6,6 +6,7 @@ import { getAllPlayers } from "../networking/Networking";
 export default function () {
   const [players, setPlayers] = useState({});
   const [playerList, setPlayerList] = useState(null);
+  const [search, setSearch] = useState(null);
   //INIT Effect
   useEffect(() => {
     async function init() {
@@ -16,20 +17,23 @@ export default function () {
 
   //players Effect
   useEffect(() => {
-    async function init(){
-      if (players.data != undefined)
-        setPlayerList(players.data.players)
+    async function init() {
+      if (players.data != undefined) setPlayerList(players.data.players);
     }
-    init()
+    init();
   }, [players]);
+
+  //search Effect
+  useEffect(()=>{
+  },[search])
   //useEffect(()=>{console.log(playerList)},[playerList])
   return (
     <div>
-      <SearchBar />
-      <PlayerForm/>
-      {playerList? (
+      <SearchBar setSearch={setSearch}/>
+      <PlayerForm />
+      {playerList ? (
         <>
-          <PlayerList roster={playerList} />
+          <PlayerList roster={playerList} search={search} />
         </>
       ) : (
         <></>
