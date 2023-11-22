@@ -11,7 +11,7 @@ export default function PlayerList(props) {
     setPlayerList(props.roster)
   },[props])
 
-  useEffect(()=>{console.log(playerList)},[playerList])
+  useEffect(()=>{},[playerList])
 
   return (
     <div className='player-list'>

@@ -14,7 +14,6 @@ export default function PlayerDetails(props) {
   }, [searchParams]);
 
   useEffect(() => {
-    console.log(player);
   }, [player]);
 
   return (

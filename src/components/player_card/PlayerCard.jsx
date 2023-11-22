@@ -10,7 +10,6 @@ export default function PlayerCard(props) {
 
     //player data effect
     useEffect(()=>{
-      console.log(props.data)
       setPlayer(props.data)
     },[props.data])
   return (

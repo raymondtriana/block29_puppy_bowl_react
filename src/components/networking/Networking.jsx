@@ -16,7 +16,6 @@ export const getAllPlayers = async function (setter) {
 export default getAllPlayers;
 
 export const getPlayerByID = async function (id, setter) {
-  console.log(id);
   try {
     const response = await fetch(BASE_URL + "players/" + id);
     const result = await response.json();
@@ -29,6 +28,22 @@ export const getPlayerByID = async function (id, setter) {
 
 export const updatePlayer = function (id, data) {};
 
-export const postPlayer = function (data) {};
+export const postPlayer = async function (data) {
+  console.log("POSTING PLAYER")
+  console.log(data)
+  try {
+    const response = await fetch(BASE_URL + "players/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    console.log(result)
+  } catch (error) {
+    console.log(error)
+  }
+};
 
 export const deletePlayer = function (id) {};
