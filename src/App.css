@@ -1,7 +1,5 @@
-#body{
-    background-image: url("https://t4.ftcdn.net/jpg/04/17/36/11/360_F_417361125_RnrhT3Np0zB0UpeD7QlwuOoyghEGGjBX.jpg");
+#container{
+    background-image: url("https://images.sidearmdev.com/crop?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fhurstathletics.com%2fimages%2f2019%2f9%2f26%2fSaxon_Stadium.JPG&height=563&width=1000&type=jpeg&gravity=smart");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
+    background-size: 100%;
 }

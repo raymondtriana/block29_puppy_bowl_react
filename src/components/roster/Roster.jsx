@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import SearchBar from "../search_bar/SearchBar";
 import PlayerList from "../player_list/PlayerList";
+import PlayerForm from "../player_form/PlayerForm";
 import { getAllPlayers } from "../networking/Networking";
 export default function () {
   const [players, setPlayers] = useState({});
@@ -25,6 +26,7 @@ export default function () {
   return (
     <div>
       <SearchBar />
+      <PlayerForm/>
       {playerList? (
         <>
           <PlayerList roster={playerList} />
