@@ -1,0 +1,15 @@
+#search-div{
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#inner-search-div{
+    margin: auto;
+    background-color: aquamarine;
+}
+#search-label{
+    border-style: solid;
+    font-size: 14pt;
+}
+#search-input{}
