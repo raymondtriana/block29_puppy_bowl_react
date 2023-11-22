@@ -6,7 +6,6 @@ import Roster from "./components/roster/Roster";
 function App() {
   return (
     <div id="container">
-      <div id="navbar"></div>
       <div id="body">
           <Routes>
             <Route path="/" element={<Roster />} />
