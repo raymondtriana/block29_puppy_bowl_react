@@ -2,7 +2,16 @@
  * Library component to centralize networking commands to the db
 */
 const BASE_URL = "https://fsa-puppy-bowl.herokuapp.com/api/2308-FTB-MT-WEB-PT/"
-export const getAllPlayers = function(){
+export const getAllPlayers = async function(setter){
+    try {
+        const response = await fetch(BASE_URL + "players");
+        const result = await response.json();
+        setter(result)
+        return result
+      } catch (err) {
+        console.error("Uh oh, trouble fetching players!", err);
+        return {}
+      }
 }
 export default getAllPlayers
 

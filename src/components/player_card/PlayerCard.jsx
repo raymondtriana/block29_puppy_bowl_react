@@ -1,18 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 /*
  *Basic card style player showing basic information
  */
-export default function PlayerCard() {
-    const [ID,setID] = useState(-1)
+export default function PlayerCard(props) {
+    const [player,setPlayer] = useState(null)
+
+    //player data effect
+    useEffect(()=>{
+      console.log(props.data)
+      setPlayer(props.data)
+    },[props.data])
   return (
     <div>
-      <p>player name</p>
-      <img src="./" alt="player image" />
-      <Link to={`details/${ID}`}>
-        <button type="button">Click Me!</button>
-      </Link>
+      {player?(<>
+        <p>{player.name}</p>
+        <img src={player.imageUrl} alt="player image" />
+        <Link to={`details/${player.id}`}>
+          <button type="button">Click Me!</button>
+        </Link>
+      </>):(<></>)}
     </div>
   );
 }
