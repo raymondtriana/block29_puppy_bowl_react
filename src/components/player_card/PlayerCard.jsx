@@ -16,9 +16,13 @@ export default function PlayerCard(props) {
   return (
     <div className="player-div">
       {player?(<>
+        <div className="name-div">
         <p className="player-name">{player.name}</p>
-        <img className = "player-image" src={player.imageUrl} alt="player image" />
-        <Link to={`details/${player.id}`}>
+        </div>
+        <div className="image-div">
+          <img className = "player-image" src={player.imageUrl} alt="player image" />
+        </div>
+        <Link className="link" to={`details?id=${player.id}`}>
           <button className="details-button" type="button">Click Me!</button>
         </Link>
       </>):(<></>)}

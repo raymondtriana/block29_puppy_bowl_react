@@ -1,0 +1,40 @@
+.detailed-player-div {
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.671);
+}
+.details-div {
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  
+}
+.detailed-name-div {
+  width: 100%;
+  text-align: center;
+  border-style: outset;
+  background-color: cadetblue;
+}
+.detailed-player-name {
+  font-size: 20pt;
+  width: auto;
+  margin: 0;
+}
+.detailed-player-image {
+  width: 512px;
+}
+.detailed-return-button {
+  background-image: linear-gradient(rgba(0, 0, 255, 0.562), rgb(153, 155, 153));
+  font-weight: bold;
+  border: none;
+  color: rgb(255, 255, 255);
+  width: 512px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 42px;
+  cursor: pointer;
+}

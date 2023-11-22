@@ -1,20 +1,28 @@
 .player-div{
     margin: 5px;
-    background-image: linear-gradient(rgba(30, 255, 0, 0.562), rgba(202, 202, 106, 0.308));
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    background-color: rgba(34, 187, 29, 0.589)
 }
 
 .player-name{
     font-size: 18pt;
-    background-color: aqua;
     margin: 0;
+    background-color: cadetblue;
 }
-.player-image{
-    width: 256px;
+
+.image-div{
+    border-style: inset;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.player-image{
+    width: 256px;
+}
+.link{
+    width: 100%;
 }
 .details-button{
     background-image: linear-gradient(rgba(0, 0, 255, 0.562), rgb(153, 155, 153));
@@ -27,4 +35,6 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
+    width: 100%;
+    border-style: outset;
 }
